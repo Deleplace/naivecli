@@ -15,10 +15,10 @@ func init() {
 		flag.PrintDefaults()
 	}
 	flag.BoolVar(&fancy, "fancy", false, "fancy output")
-	flag.Parse()
 }
 
 func main() {
+	flag.Parse()
 	if len(flag.Args()) < 1 {
 		flag.Usage()
 		os.Exit(1)
